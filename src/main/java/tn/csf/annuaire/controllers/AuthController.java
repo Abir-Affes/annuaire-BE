@@ -15,6 +15,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import tn.csf.annuaire.models.ERole;
 import tn.csf.annuaire.models.Role;
+import tn.csf.annuaire.models.Speciality;
 import tn.csf.annuaire.models.User;
 import tn.csf.annuaire.payload.request.LoginRequest;
 import tn.csf.annuaire.payload.request.SignupRequest;
@@ -126,4 +128,6 @@ public class AuthController {
 
 		return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
 	}
+	
+
 }

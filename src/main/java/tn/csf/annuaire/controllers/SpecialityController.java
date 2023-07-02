@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import tn.csf.annuaire.models.Speciality;
-import tn.csf.annuaire.security.services.SpecialityServices;
+import tn.csf.annuaire.services.SpecialityServices;
 
 
 //mark class as Controller  

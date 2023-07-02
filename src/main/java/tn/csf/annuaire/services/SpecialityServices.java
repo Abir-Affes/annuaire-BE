@@ -1,4 +1,4 @@
-package tn.csf.annuaire.security.services;
+package tn.csf.annuaire.services;
 
 import java.util.ArrayList;  
 import java.util.List;  
