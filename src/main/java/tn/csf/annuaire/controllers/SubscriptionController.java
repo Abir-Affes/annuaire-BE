@@ -54,7 +54,7 @@ public class SubscriptionController {
 	} 
 
 	//creating put mapping that updates the article detail
-	@PutMapping("/speciality")  
+	@PutMapping("/subscription")  
 	private Subscription update(@RequestBody  Subscription s)   
 	{  
 		subscriptionService.saveOrUpdate(s);  
