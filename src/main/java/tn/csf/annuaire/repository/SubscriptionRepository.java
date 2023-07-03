@@ -1,5 +1,11 @@
 package tn.csf.annuaire.repository;
 
-public interface SubscriptionRepository {
+import org.springframework.data.repository.CrudRepository;
 
-}
+import tn.csf.annuaire.models.Subscription;
+
+//repository that extends CrudRepository  
+
+public interface SubscriptionRepository extends CrudRepository<Subscription, Integer>  
+{  
+}  

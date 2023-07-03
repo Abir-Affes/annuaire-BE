@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import tn.csf.annuaire.models.Speciality;
 import tn.csf.annuaire.models.User;
-import tn.csf.annuaire.services.SpecialityServices;
 import tn.csf.annuaire.services.UserServices;
 
 @RestController 
