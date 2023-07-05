@@ -26,28 +26,28 @@ public class NotificationController {
 	NotificationServices notificationService;  
 
 	//creating a get mapping that retrieves all the Article detail from the database   
-	@GetMapping("/sotification")
+	@GetMapping("/notifications")
 	private List<Notification> getAllNotifications()   
 	{  
 		return notificationService.getAllNotifications();  
 	}  
 
 	//creating a get mapping that retrieves the detail of a specific article  
-	@GetMapping("/notification/{id}")  
+	@GetMapping("/notifications/{id}")  
 	private Notification getNotification(@PathVariable("id") int id)   
 	{  
 		return notificationService.getNotificationsById(id);  
 	}  
 
 	//creating a delete mapping that deletes a specified article  
-	@DeleteMapping("/notification/{id}")  
+	@DeleteMapping("/notifications/{id}")  
 	private void deleteNotification(@PathVariable("id") int id)   
 	{  
 		notificationService.delete(id);  
 	} 
 
 	//create new article
-	@PostMapping("/notification")  
+	@PostMapping("/notifications")  
 	private int saveNotification(@RequestBody Notification n)   
 	{  
 		notificationService.saveOrUpdate(n);  
@@ -55,7 +55,7 @@ public class NotificationController {
 	} 
 
 	//creating put mapping that updates the article detail
-	@PutMapping("/notification")  
+	@PutMapping("/notifications")  
 	private Notification update(@RequestBody  Notification n)   
 	{  
 		notificationService.saveOrUpdate(n);  

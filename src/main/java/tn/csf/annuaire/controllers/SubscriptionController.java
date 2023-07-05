@@ -25,28 +25,28 @@ public class SubscriptionController {
 	SubscriptionServices subscriptionService;  
 
 	//creating a get mapping that retrieves all the Article detail from the database   
-	@GetMapping("/Subscription")
+	@GetMapping("/subscriptions")
 	private List<Subscription> getAllSubscriptions()   
 	{  
 		return subscriptionService.getAllSubscriptions();  
 	}  
 
 	//creating a get mapping that retrieves the detail of a specific article  
-	@GetMapping("/Subscription/{id}")  
+	@GetMapping("/subscriptions/{id}")  
 	private Subscription getSubscription(@PathVariable("id") int id)   
 	{  
 		return subscriptionService.getSubscriptionsById(id);  
 	}  
 
 	//creating a delete mapping that deletes a specified article  
-	@DeleteMapping("/subscription/{id}")  
+	@DeleteMapping("/subscriptions/{id}")  
 	private void deleteSubscription(@PathVariable("id") int id)   
 	{  
 		subscriptionService.delete(id);  
 	} 
 
 	//create new article
-	@PostMapping("/subscription")  
+	@PostMapping("/subscriptions")  
 	private int saveSubscription(@RequestBody Subscription s)   
 	{  
 		subscriptionService.saveOrUpdate(s);  
@@ -54,7 +54,7 @@ public class SubscriptionController {
 	} 
 
 	//creating put mapping that updates the article detail
-	@PutMapping("/subscription")  
+	@PutMapping("/subscriptions")  
 	private Subscription update(@RequestBody  Subscription s)   
 	{  
 		subscriptionService.saveOrUpdate(s);  

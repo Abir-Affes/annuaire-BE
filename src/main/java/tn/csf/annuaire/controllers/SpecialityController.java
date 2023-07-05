@@ -25,28 +25,28 @@ public class SpecialityController {
 	SpecialityServices specialityService;  
 
 	//creating a get mapping that retrieves all the Article detail from the database   
-	@GetMapping("/speciality")
+	@GetMapping("/specialities")
 	private List<Speciality> getAllSpecialities()   
 	{  
 		return specialityService.getAllSpecialties();  
 	}  
 
 	//creating a get mapping that retrieves the detail of a specific article  
-	@GetMapping("/speciality/{id}")  
+	@GetMapping("/specialities/{id}")  
 	private Speciality getSpeciality(@PathVariable("id") int id)   
 	{  
 		return specialityService.getSpecialtiesById(id);  
 	}  
 
 	//creating a delete mapping that deletes a specified article  
-	@DeleteMapping("/speciality/{id}")  
+	@DeleteMapping("/specialities/{id}")  
 	private void deleteSpeciality(@PathVariable("id") int id)   
 	{  
 		specialityService.delete(id);  
 	} 
 
 	//create new article
-	@PostMapping("/speciality")  
+	@PostMapping("/specialities")  
 	private int saveSpeciality(@RequestBody Speciality s)   
 	{  
 		specialityService.saveOrUpdate(s);  
@@ -54,7 +54,7 @@ public class SpecialityController {
 	} 
 
 	//creating put mapping that updates the article detail
-	@PutMapping("/speciality")  
+	@PutMapping("/specialities")  
 	private Speciality update(@RequestBody  Speciality s)   
 	{  
 		specialityService.saveOrUpdate(s);  
