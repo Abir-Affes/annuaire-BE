@@ -10,7 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;  
- 
+import java.time.format.DateTimeFormatter;
+
 @Entity  
 
 @Table  
@@ -33,6 +34,11 @@ public class Subscription{
 	@ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+	 public String getExperationFormatted() {
+	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+	        return experation.format(formatter);
+	    }
+
 
 	public int getId() {
 		return id;
