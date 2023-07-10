@@ -27,8 +27,8 @@ public class Speciality {
 	@Column  
 	private String description;
 	
-	@OneToMany(mappedBy = "speciality")
-    private List<User> users;
+
+
 
 	public int getId() {
 		return id;
@@ -55,17 +55,11 @@ public class Speciality {
 	}
 	
 
-	public List<User> getUsers() {
-		return users;
-	}
 
-	public void setUsers(List<User> users) {
-		this.users = users;
-	}
 
 	@Override
 	public String toString() {
-		return "Speciality [id=" + id + ", name=" + name + ", description=" + description + ", users=" + users + "]";
+		return "Speciality [id=" + id + ", name=" + name + ", description=" + description + "]";
 	}
 
 	
